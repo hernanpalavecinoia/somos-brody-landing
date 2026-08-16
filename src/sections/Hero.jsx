@@ -1,4 +1,4 @@
-import { WHATSAPP_LINK } from "../config";
+import { WHATSAPP_LINK_DEFAULT } from "../config";
 import heroIllustration from "../assets/illustrations/hero-automation.svg";
 
 export function Hero() {
@@ -31,7 +31,7 @@ export function Hero() {
           <div className="button-row">
             <a
               className="button button-primary whatsapp-link"
-              href={WHATSAPP_LINK}
+              href={WHATSAPP_LINK_DEFAULT}
               target="_blank"
               rel="noopener noreferrer"
             >
