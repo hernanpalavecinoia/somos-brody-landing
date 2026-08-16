@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CHAT_WEBHOOK_URL, WHATSAPP_LINK } from "../config";
 
-const INITIAL_MESSAGE = "Contame tu rubro y te muestro cómo te atendería 👋";
+const INITIAL_MESSAGE = "Contame tu rubro y te muestro en vivo cómo respondería a tus clientes 👋";
 const MAX_RESUMEN = 300;
 
 export function ChatDemo() {
