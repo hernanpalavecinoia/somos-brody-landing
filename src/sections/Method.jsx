@@ -9,7 +9,7 @@ const CARDS = [
     icon: diagnosticIcon,
     alt: "Ilustración de diagnóstico y análisis",
     title: "Diagnóstico",
-    text: "Analizamos tu negocio para detectar dónde se están perdiendo oportunidades: en el tráfico, la conversión o el seguimiento.",
+    text: "Analizamos tu negocio para detectar dónde se están perdiendo oportunidades: en el tiempo de respuesta, las tareas repetitivas o el agendamiento.",
   },
   {
     n: 2,

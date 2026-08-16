@@ -7,7 +7,7 @@ export function Hero() {
       <div className="container hero-grid">
         <div className="hero-copy reveal">
           <h1>
-            Tu negocio
+            ¿Tu negocio
             <br />
             pierde clientes
             <br />
@@ -19,9 +19,10 @@ export function Hero() {
             </span>
           </h1>
           <p>
-            En Brody detectamos dónde se pierden tus oportunidades y
-            diseñamos soluciones para responder, convertir y dar seguimiento
-            de forma más eficiente.
+            En Brody instalamos un agente de inteligencia artificial que
+            responde al instante, entiende qué necesita cada cliente y
+            agenda la reunión automáticamente, para que dejes de perder
+            ventas por no llegar a tiempo.
           </p>
           <p>
             Aplicamos automatización e inteligencia artificial solo cuando

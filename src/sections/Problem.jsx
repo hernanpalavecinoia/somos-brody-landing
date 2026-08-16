@@ -3,18 +3,18 @@ import { REVEAL_DELAY } from "../lib/reveal";
 const CARDS = [
   {
     n: 1,
-    title: "Tráfico",
-    text: "¿No estás llegando a suficientes personas interesadas en lo que ofrecés?",
+    title: "Tiempo de respuesta",
+    text: "¿Tardás horas en contestar y el cliente ya eligió a otro?",
   },
   {
     n: 2,
-    title: "Conversión",
-    text: "¿Recibís consultas, pero pocas terminan convirtiéndose en ventas?",
+    title: "Tareas repetitivas",
+    text: "¿Perdés tiempo respondiendo siempre lo mismo en vez de vender?",
   },
   {
     n: 3,
-    title: "Seguimiento",
-    text: "¿Conseguís clientes, pero no tenés un sistema para que vuelvan a comprarte?",
+    title: "Agendamiento",
+    text: "¿Conseguís que te escriban, pero se pierde tiempo coordinando el horario de la reunión?",
   },
 ];
 
@@ -24,7 +24,7 @@ export function Problem() {
       <div className="container">
         <div className="section-heading reveal">
           <span className="eyebrow">El problema</span>
-          <h2>¿En dónde se traba tu negocio?</h2>
+          <h2>¿Dónde se te escapan los clientes que ya te escriben?</h2>
         </div>
 
         <div className="problem-grid">

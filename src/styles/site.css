@@ -1002,3 +1002,17 @@ a {
   opacity: 0.5;
   cursor: not-allowed;
 }
+.chat-panel__whatsapp-cta {
+  display: block;
+  text-align: center;
+  padding: 12px 14px;
+  background: var(--purple);
+  color: var(--white);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+}
+.chat-panel__whatsapp-cta:hover {
+  opacity: 0.9;
+}
