@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { CHAT_WEBHOOK_URL } from "../config";
+import { CHAT_WEBHOOK_URL, WHATSAPP_LINK } from "../config";
 
-const INITIAL_MESSAGE = "Contame tu rubro y te muestro cómo te atendería 👋";
+const INITIAL_MESSAGE = "Contame tu rubro y te muestro en vivo cómo respondería a tus clientes 👋";
+const MAX_RESUMEN = 300;
 
 export function ChatDemo() {
   const [messages, setMessages] = useState([
@@ -40,6 +41,24 @@ export function ChatDemo() {
       setSending(false);
     }
   }
+
+  // Mensajes que escribió la persona en el demo (no los de Bro-web).
+  const mensajesUsuario = messages.filter((m) => m.rol === "usuario").map((m) => m.contenido);
+  const yaHabloConBro = mensajesUsuario.length > 0;
+
+  // Resumen corto de lo que ya contó, para precargarlo en WhatsApp.
+  // Si la persona lo borra y escribe "hola" en su lugar, Bro lo trata como
+  // un contacto directo de cero (mismo comportamiento de siempre) — esto
+  // es solo un atajo para no repetir lo que ya dijo acá.
+  function armarResumen() {
+    let resumen = mensajesUsuario.join(" "); // texto crudo, en orden
+    if (resumen.length > MAX_RESUMEN) resumen = resumen.slice(0, MAX_RESUMEN).trim() + "...";
+    return `Vengo de la web. Ya le conté esto a Bro: "${resumen}"`;
+  }
+
+  const whatsappHref = yaHabloConBro
+    ? `${WHATSAPP_LINK}?text=${encodeURIComponent(armarResumen())}`
+    : WHATSAPP_LINK;
 
   return (
     <div className="chat-panel">
@@ -80,6 +99,17 @@ export function ChatDemo() {
           ➤
         </button>
       </form>
+
+      {yaHabloConBro && (
+        <a
+          className="chat-panel__whatsapp-cta"
+          href={whatsappHref}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Continuar por WhatsApp →
+        </a>
+      )}
     </div>
   );
 }

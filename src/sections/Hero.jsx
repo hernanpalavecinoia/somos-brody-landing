@@ -1,4 +1,4 @@
-import { WHATSAPP_LINK } from "../config";
+import { WHATSAPP_LINK_DEFAULT } from "../config";
 import heroIllustration from "../assets/illustrations/hero-automation.svg";
 
 export function Hero() {
@@ -7,7 +7,7 @@ export function Hero() {
       <div className="container hero-grid">
         <div className="hero-copy reveal">
           <h1>
-            Tu negocio
+            <span className="q-mark">¿</span>Tu negocio
             <br />
             pierde clientes
             <br />
@@ -19,9 +19,10 @@ export function Hero() {
             </span>
           </h1>
           <p>
-            En Brody detectamos dónde se pierden tus oportunidades y
-            diseñamos soluciones para responder, convertir y dar seguimiento
-            de forma más eficiente.
+            En Brody instalamos un agente de inteligencia artificial que
+            responde al instante, entiende qué necesita cada cliente y
+            agenda la reunión automáticamente, para que dejes de perder
+            ventas por no llegar a tiempo.
           </p>
           <p>
             Aplicamos automatización e inteligencia artificial solo cuando
@@ -30,7 +31,7 @@ export function Hero() {
           <div className="button-row">
             <a
               className="button button-primary whatsapp-link"
-              href={WHATSAPP_LINK}
+              href={WHATSAPP_LINK_DEFAULT}
               target="_blank"
               rel="noopener noreferrer"
             >

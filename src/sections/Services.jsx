@@ -18,9 +18,9 @@ const CARDS = [
     alt: "Icono de campañas y Meta Ads",
     label: "Meta Ads",
     labelClass: "service-label-lime",
-    text: "Diseñamos campañas para que tu negocio llegue a las personas correctas, con una estrategia pensada para generar resultados y oportunidades reales.",
+    text: "Si todavía no tenés campañas armadas (o no te convencen los resultados), te las armamos y gestionamos mes a mes en Instagram y Facebook.",
     listClass: "list-lime",
-    items: ["Estrategia orientada a resultados", "Segmentación del público", "Más consultas, mejores oportunidades"],
+    items: ["Campaña armada de cero", "Gestión y optimización mensual", "Para sumar tráfico si todavía no lo tenés"],
   },
   {
     icon: designIcon,

@@ -1,4 +1,4 @@
-import { WHATSAPP_LINK } from "../config";
+import { WHATSAPP_LINK_DEFAULT } from "../config";
 
 export function Contact() {
   return (
@@ -14,7 +14,7 @@ export function Contact() {
         </p>
         <a
           className="button button-primary button-large whatsapp-link"
-          href={WHATSAPP_LINK}
+          href={WHATSAPP_LINK_DEFAULT}
           target="_blank"
           rel="noopener noreferrer"
         >
