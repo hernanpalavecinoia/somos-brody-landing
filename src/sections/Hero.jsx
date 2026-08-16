@@ -7,7 +7,7 @@ export function Hero() {
       <div className="container hero-grid">
         <div className="hero-copy reveal">
           <h1>
-            ¿Tu negocio
+            <span className="q-mark">¿</span>Tu negocio
             <br />
             pierde clientes
             <br />
