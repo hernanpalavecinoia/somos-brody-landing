@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CHAT_WEBHOOK_URL, WHATSAPP_LINK } from "../config";
 
-const INITIAL_MESSAGE = "Contame tu rubro y te muestro en vivo cómo respondería a tus clientes 👋";
+const INITIAL_MESSAGE = "Hola, contame tu rubro y te muestro en vivo cómo respondería a tus clientes 👋";
 const MAX_RESUMEN = 300;
 
 export function ChatDemo() {
@@ -50,8 +50,12 @@ export function ChatDemo() {
   // Si la persona lo borra y escribe "hola" en su lugar, Bro lo trata como
   // un contacto directo de cero (mismo comportamiento de siempre) — esto
   // es solo un atajo para no repetir lo que ya dijo acá.
+  //
+  // Ojo: usamos SOLO el primer mensaje (donde cuenta su rubro real), no los
+  // que vienen después — esos son el rol-play de "cliente de su negocio" y
+  // mezclarlos confunde al Bro real de WhatsApp (recibe info contradictoria).
   function armarResumen() {
-    let resumen = mensajesUsuario.join(" "); // texto crudo, en orden
+    let resumen = mensajesUsuario[0] || "";
     if (resumen.length > MAX_RESUMEN) resumen = resumen.slice(0, MAX_RESUMEN).trim() + "...";
     return `Vengo de la web. Ya le conté esto a Bro: "${resumen}"`;
   }
